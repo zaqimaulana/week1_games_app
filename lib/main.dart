@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: GameScreen(),
+      title: 'Fruit Catcher Game',
+      home: const GameScreen(),
     );
   }
 }
@@ -27,3 +27,33 @@ class GameScreen extends StatelessWidget {
   }
 }
 
+class GameScreen extends StatefulWidget {
+  const GameScreen({super.key});
+
+  @override
+  State<GameScreen> createState() => _GameScreenState();
+}
+
+class _GameScreenState extends State<GameScreen> {
+
+  @override
+  void initState() {
+  super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Dashboard"),
+        actions: const [],
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+            children: [],
+        ),
+      ),
+    );
+  }
+}
